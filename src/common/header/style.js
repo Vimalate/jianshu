@@ -86,6 +86,40 @@ export const Button =styled.div`
 		background-color: #ec6149;
 	}
 `
+export const SearchInfo=styled.div`
+	position: absolute;
+	top:56px;
+	left:0; 
+	width:240px;
+	padding:0 20px;
+	box-shadow:0 0 8px rgba(0,0,0,.2);
+`
+export const SearchInfoTitle=styled.div`
+	margin-top:20px;
+	margin-bottom:15px;
+	line-height: 20px;
+	font-size:14px;
+	color:#969696;
+`
+export const SearchInfoList=styled.div`
+	overflow: hidden;
+`
+export const SearchinfoItem=styled.a`
+	display:block;
+	float: left; 
+	margin-right:10px;
+	margin-bottom:15px;
+	padding:0 5px;
+	font-size:12px;
+	border:1px solid #ddd;
+	line-height: 20px;
+	color:#787878;
+	border-radius:3px;
+`
+export const SearchInfoSwitch=styled.span`
+	float:right;
+	font-size:12px;
+`
 export const SerchWrapper=styled.div`
 	float: left;
 	position: relative;
