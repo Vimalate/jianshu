@@ -11,7 +11,8 @@ import {
 
 class Header extends Component{
 	getListArea(){
-		if(this.props.focused){
+		const {focused,list} =this.props
+		if(focused){
 			return (
 				<SearchInfo>
 					<SearchInfoTitle>热门搜索
@@ -19,7 +20,7 @@ class Header extends Component{
 					</SearchInfoTitle>
 					<SearchInfoList>
 						{
-							this.props.list.map((item)=>{
+							list.map((item)=>{
 								return <SearchinfoItem key={item}>{item}</SearchinfoItem>
 								
 							})
@@ -32,6 +33,7 @@ class Header extends Component{
 		}
 	}
 	render(){
+		const {focused,handleInputFocus,handleInputBlur} =this.props
 		return (
 			<HeaderWrapper>
 		<Logo></Logo>
@@ -43,10 +45,10 @@ class Header extends Component{
 					Aa
 				</NavItem>
 				<SerchWrapper>
-				<CSSTransition in={this.props.focused} timeout={200} classNames='slide'>
-				<NavSearch onFocus={this.props.handleInputFocus} className={this.props.focused?'focused':''} onBlur={this.props.handleInputBlur}></NavSearch>
+				<CSSTransition in={focused} timeout={200} classNames='slide'>
+				<NavSearch onFocus={handleInputFocus} className={focused?'focused':''} onBlur={handleInputBlur}></NavSearch>
 				</CSSTransition>
-				<i  className={this.props.focused?'focused iconfont icon-search':'iconfont icon-search'}></i>
+				<i  className={focused?'focused iconfont icon-search':'iconfont icon-search'}></i>
 				{this.getListArea()}
 				</SerchWrapper>
 		</Nav>

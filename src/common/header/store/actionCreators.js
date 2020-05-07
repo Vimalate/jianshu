@@ -19,7 +19,6 @@ export const getList = () => {
 			const data = res.data
 			const action=changeList(data.data)
 			dispatch(action)
-			console.log(data)
 		}).catch((err) => {
 			console.log(err)
 		})
