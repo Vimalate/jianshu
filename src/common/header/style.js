@@ -119,10 +119,16 @@ export const SearchinfoItem=styled.a`
 export const SearchInfoSwitch=styled.span`
 	float:right;
 	font-size:12px;
+	cursor: pointer;
+	.icon-gengxin{
+		font-size:12px;
+		margin-right: 3px;
+	}
 `
 export const SerchWrapper=styled.div`
 	float: left;
 	position: relative;
+	cursor: pointer;
 	.slide-enter{
 		transition:all .2s ease-out
 	}
@@ -135,7 +141,7 @@ export const SerchWrapper=styled.div`
 	.slide-exit-active{
 		width:160px;
 	}
-	.iconfont{
+	.zoom{
 		position: absolute;
 		right:5px;
 		bottom:4px;
